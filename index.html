@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zero Consumption Survey</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card">
+
+    <h1>Zero Consumption Survey</h1>
+
+    <form id="surveyForm">
+
+      <!-- Survey Date -->
+      <div class="form-group">
+        <label>Survey Date</label>
+        <input type="date" id="surveyDate" required>
+      </div>
+
+      <!-- Meter Number -->
+      <div class="form-group">
+        <label>Meter Number</label>
+        <input type="text" id="meterNumber" placeholder="Enter Meter Number" required>
+      </div>
+
+      <!-- Zone -->
+      <div class="form-group">
+        <label>Zone</label>
+        <select id="zone" required>
+          <option value="">Select Zone</option>
+        </select>
+      </div>
+
+      <!-- Circle -->
+      <div class="form-group">
+        <label>Circle</label>
+        <select id="circle" required>
+          <option value="">Select Circle</option>
+        </select>
+      </div>
+
+      <!-- Division -->
+      <div class="form-group">
+        <label>Division</label>
+        <select id="division" required>
+          <option value="">Select Division</option>
+        </select>
+      </div>
+
+      <!-- DT Code -->
+      <div class="form-group">
+        <label>DT Code</label>
+        <select id="dtCode" required>
+          <option value="">Select DT Code</option>
+        </select>
+      </div>
+
+      <!-- DT Name -->
+      <div class="form-group">
+        <label>DT Name</label>
+        <input type="text" id="dtName" readonly>
+      </div>
+
+      <!-- Reason -->
+      <div class="form-group">
+        <label>Reason of Less Consumption</label>
+        <select id="reason" required>
+          <option value="">Select Reason</option>
+        </select>
+      </div>
+
+      <!-- Status -->
+      <div class="form-group">
+        <label>Resolution Status</label>
+        <select id="status" required>
+          <option value="">Select Status</option>
+        </select>
+      </div>
+
+      <!-- Survey Done By -->
+      <div class="form-group">
+        <label>Rectification / Survey Done By</label>
+        <input type="text" id="surveyBy">
+      </div>
+
+      <!-- If Resolved -->
+      <div class="form-group">
+        <label>If resolved, then how?</label>
+        <textarea id="resolvedHow"></textarea>
+      </div>
+
+      <!-- Requirement -->
+      <div class="form-group">
+        <label>If not resolved, what is requirement?</label>
+        <textarea id="requirement"></textarea>
+      </div>
+
+      <!-- Images -->
+      <div class="form-group">
+        <label>Meter Image</label>
+        <input type="file" id="meterImage" accept="image/*">
+        <img id="meterPreview" class="preview">
+      </div>
+
+      <div class="form-group">
+        <label>Meter Ampere Image</label>
+        <input type="file" id="ampereImage" accept="image/*">
+        <img id="amperePreview" class="preview">
+      </div>
+
+      <div class="form-group">
+        <label>Meter Image with CT</label>
+        <input type="file" id="ctImage" accept="image/*">
+        <img id="ctPreview" class="preview">
+      </div>
+
+      <div class="form-group">
+        <label>Meter Image with DT and Cable</label>
+        <input type="file" id="dtImage" accept="image/*">
+        <img id="dtPreview" class="preview">
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="submit-btn">
+        Submit Survey
+      </button>
+
+      <div id="msg"></div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
